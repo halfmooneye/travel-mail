@@ -1,0 +1,27 @@
+
+.api-call {
+  margin: 20px;
+}
+
+@media screen and (min-width: 720px) {
+  .mat-column-uriPath {
+    min-width: 400px;
+  }
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+iframe {
+  flex: 1;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

@@ -1,0 +1,44 @@
+@media screen and (max-width: 720px) {
+  router-outlet {
+    margin-top: 56px;
+  }
+}
+
+.ahem-toolbar-small {
+  font-size: 0.8em;
+}
+
+.ahem-logo {
+  width: 64px;
+  height: 64px;
+}
+
+.ahem-logo-text {
+  margin-left: 20px;
+  height: 64px;
+  width: 200px;
+}
+
+:host .ahem-logo-text ::ng-deep path {
+   fill: #dbeaff;
+ }
+
+
+@media screen and (min-width: 720px) {
+  .ahem-logo {
+    width: 128px;
+    height: 128px;
+  }
+  .ahem-logo-text {
+    margin-left: 30px;
+    width: 256px;
+  }
+}
+
+.on-mailbox-page {
+  margin-left: 40px;
+  height: 64px;
+  width: 128px;
+}
+
+

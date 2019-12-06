@@ -1,0 +1,69 @@
+.ahem-envelope {
+  font-size: 20px;
+  height: 20px !important;
+}
+
+.ahem-email-unread h2, .ahem-email-unread p{
+  font-weight: bolder !important;
+}
+
+.ahem-email-list {
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.ahem-internal-toolbar {
+  padding-left: 20px;
+}
+
+.fumbled {
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media screen and (min-width: 720px){
+  .ahem-internal-toolbar {
+    padding-left: 168px;
+  }
+}
+
+.emails-list {
+  max-width: 600px;
+  min-width: 360px;
+  width: 100%;
+}
+
+.email-list-container {
+  width: 100%;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding-top: 20px;
+  align-items: center;
+}
+
+.email-list-adsense {
+  width: 300px;
+}
+
+@media screen and (min-width: 879px) {
+  .email-list-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .email-list-adsense {
+    max-width: 200px;
+  }
+}
+
+
+.ahem-empty-list {
+  max-width: 600px;
+  margin: auto;
+}
+

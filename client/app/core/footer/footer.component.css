@@ -1,0 +1,24 @@
+.footer-item {
+  margin: 5px;
+}
+
+.footer-internal {
+  border-top: 1px solid #9cc9d6;
+  background: #b0bec9;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: -webkit-flex; /* Safari */
+}
+
+/*background: -webkit-linear-gradient(left top, #b3e5fc, #8AC5FC); !* For Safari 5.1 to 6.0 *!*/
+/*background: -o-linear-gradient(bottom right, #b3e5fc, #8AC5FC); !* For Opera 11.1 to 12.0 *!*/
+/*background: -moz-linear-gradient(bottom right, #b3e5fc, #8AC5FC); !* For Firefox 3.6 to 15 *!*/
+/*background: linear-gradient(to bottom right, #b3e5fc, #8AC5FC); !* Standard syntax *!*/
+

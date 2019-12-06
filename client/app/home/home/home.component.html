@@ -1,0 +1,29 @@
+<app-banner></app-banner>
+<div class="adsense-container">
+  <ng-adsense *ngIf="this.deviceService.getPlatformWidth()>1024" class="ng-adsense-adaptive"></ng-adsense>
+  <div class="ahem-centered" *ngIf="properties.customText">
+    <mat-card-content [innerHtml]="properties.customText" class="ahem-centered">
+    </mat-card-content>
+  </div>
+  <div *ngIf="!properties.customText" class="home-container">
+    <div class="home-inner-container">
+      <div class="home-content-container">
+        <app-home-page-item *ngFor='let item of items' [homePageItem]="item"></app-home-page-item>
+      </div>
+      <article class="home-text-bottom">
+        AHEM is a free ad-hoc disposable temporary Email service.
+        <ul>
+          <li><strong>Ad-hoc</strong> - a mailbox is created for your temporary email address as soon as you need it, just by sending it an email.</li>
+          <li><strong>Disposable</strong> - you can throw a disposable mailbox right away. No unsubscibing from a service, cancelling your account or anything of the sort. No strings attached.</li>
+          <li><strong>Temporary</strong> - Your mailbox is temporary. The emails received will be deleted by the system after a certain time elapses.</li>
+          <li><strong>Free</strong> - you know what that means!</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+  <ng-adsense class="ng-adsense-adaptive"></ng-adsense>
+</div>
+
+<app-email-count></app-email-count>
+<!--<ng-adsense class="ng-adsense-center"></ng-adsense>-->
+

@@ -1,0 +1,12 @@
+section {
+  cursor: pointer;
+}
+
+section:focus {
+  outline: none;
+}
+
+mat-divider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

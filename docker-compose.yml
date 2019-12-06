@@ -1,0 +1,29 @@
+version: "3"
+services:
+  ahem:
+    image: o4oren/ahem:latest
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "3000:3000"
+      - "25:25"
+    tty: true
+    networks:
+      - net1
+    depends_on:
+      - mongodb
+    volumes:
+      - [PATH TO LOCAL PROPERTIES]properties.json:/opt/ahem/properties.json
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - net1
+networks:
+  net1:

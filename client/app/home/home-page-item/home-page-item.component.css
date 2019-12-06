@@ -1,0 +1,25 @@
+fa-icon {
+  font-size: 30px;
+  align-self: center;
+  color: #515f77;
+}
+
+.home-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title {
+  margin-top: 20px;
+  font-weight: 900;
+  font-size: 16px;
+  color: #94aace;
+}
+
+.text {
+  margin-top: 20px;
+}

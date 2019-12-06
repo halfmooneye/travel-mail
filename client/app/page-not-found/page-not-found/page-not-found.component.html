@@ -1,0 +1,29 @@
+<app-banner [showMailboxSelector]="false" h1="404 - Ahem... page not found..." h2="The page you were looking for was not found"><</app-banner>
+<div class="ahem-centered">
+  <img src="assets/svg/fumbled-bluish.svg" alt="404 - page not found" class="fumbled">
+  <p>
+    Please use one of the links below to continue:
+  <ul>
+    <li>
+      <a [routerLink]="['/']">
+        AHEM Home
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/privacy']">
+        Privacy policy
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/help/api']">
+        API Documentation
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/o4oren/Ad-Hoc-Email-Server" target="_blank">
+        Our GitHub Home
+      </a>
+    </li>
+  </ul>
+  <ng-adsense></ng-adsense>
+</div>

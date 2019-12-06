@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://www.ahem.email/</loc>
+    <lastmod>2018-12-09</lastmod>
+    <image:image>
+      <image:loc>https://www.ahem.email/assets/svg/ahem-bluish.svg</image:loc>
+      <image:caption>AHEM - an ad-hoc email logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ahem.email/assets/svg/ahem-logo-text.svg</image:loc>
+      <image:caption>AHEM - an ad-hoc email logo text</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ahem.email/assets/svg/ahem-sm-bottom-text.svg</image:loc>
+      <image:caption>AHEM - an ad-hoc email</image:caption>
+    </image:image>
+  </url>
+  <url>
+  	<loc>https://www.ahem.email/privacy</loc>
+    <lastmod>2019-03-02</lastmod>
+  </url>
+  <url>
+	  <loc>https://www.ahem.email/help/api</loc>
+    <lastmod>2019-03-02</lastmod>
+  </url>
+  <url>
+	  <loc>https://www.ahem.email/api-doc</loc>
+    <lastmod>2019-03-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ahem.email/help/faq</loc>
+    <lastmod>2019-03-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ahem.email/help/about</loc>
+    <lastmod>2019-03-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ahem.email/blog</loc>
+    <lastmod>2019-03-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ahem.email/blog/post/how-to-set-up-your-own-disposable-email-server</loc>
+    <lastmod>2019-03-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ahem.email/blog/post/run-ahem-on-docker</loc>
+    <lastmod>2019-03-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ahem.email/mailbox</loc>
+  </url>
+</urlset>

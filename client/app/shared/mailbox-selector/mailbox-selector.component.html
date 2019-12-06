@@ -1,0 +1,35 @@
+<div *ngIf="isInline" class="ahem-inline-input-div">
+  <input  type="text" matInput
+          [matAutocomplete]="auto"
+          [formControl]="autoCompleteControl"
+          [(ngModel)]="selectedMailbox"
+          placeholder="Mailbox"
+          (keyup.enter)="clickSubmit()"
+          class="ahem-inline-input mat-elevation-z8">
+  <button mat-button matSuffix mat-icon-button aria-label="Go" routerLink="/mailbox/{{selectedMailbox | trimDomain}}">
+    <mat-icon>navigate next</mat-icon>
+  </button>
+  <!--<span *ngIf="isInline && !deviceService.isSmallScreen()" matSuffix style="color: lightgrey">@{{properties.allowedDomains[0]}}</span>-->
+</div>
+
+<div *ngIf="!isInline">
+  <div class="background">
+    <mat-form-field color="primary">
+      <input type="text" matInput
+             [matAutocomplete]="auto"
+             [formControl]="autoCompleteControl"
+             [(ngModel)]="selectedMailbox"
+             placeholder="Mailbox"
+             (keyup.enter)="clickSubmit()">
+      <span matSuffix class="suffix">@{{properties.allowedDomains[0]}}</span>
+    </mat-form-field>
+    <mat-autocomplete #auto="matAutocomplete" >
+      <mat-option *ngFor="let mailbox of mailboxes" [value]="mailbox">
+        {{ mailbox }}
+      </mat-option>
+    </mat-autocomplete>
+    <button mat-button routerLink="/mailbox/{{selectedMailbox | trimDomain}}">Submit</button>
+    <button mat-button (click)="generateEmail()">Generate</button>
+  </div>
+</div>
+

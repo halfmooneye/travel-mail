@@ -1,0 +1,52 @@
+.ahem-email-content-container {
+  font-size: smaller;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  width:100%;
+}
+
+.ahem-email-content {
+  overflow: auto;
+  margin-top: 20px;
+}
+
+ng-adsense {
+  margin: 10px;
+}
+
+.email-view-adsense-container {
+  flex: 1;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email-card {
+  position: static;
+}
+
+.email-view-adsense {
+  text-align: center;
+  margin: 10px;
+  display: none;
+}
+
+@media screen and (min-width: 720px){
+  .ahem-email-content-container {
+  }
+  .email-view-adsense-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .email-view-adsense {
+    width: 200px;
+    display: block;
+  }
+
+  .ng-adsense-center {
+    display: none;
+  }
+}
+

@@ -1,0 +1,36 @@
+/*a {*/
+  /*padding: 3px;*/
+  /*border-radius: 3px;*/
+/*}*/
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+span:hover {
+  background: #f2f2f2;
+  transition: all .3s;
+}
+
+.attachment {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.ahem-attachment-span {
+  margin-right: 10px;
+}

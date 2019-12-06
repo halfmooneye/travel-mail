@@ -1,0 +1,76 @@
+.banner {
+  height: 250px;
+  width: 100%;
+  text-align: center ;
+  margin-bottom: 80px;
+}
+
+.banner-no-mailbox-selector {
+  height: 250px;
+  width: 100%;
+  text-align: center ;
+}
+
+h1 {
+  margin: 0px;
+  padding-top: 20px;
+  font-size: 30px;
+  color: #515f77;
+}
+
+h2 {
+  display: none;
+}
+
+mat-icon {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 70px;
+}
+
+.sky {
+  background: url(../../../assets/svg/sky.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover, 250px;
+}
+
+
+@media screen and (min-width: 425px){
+  app-mailbox-selector {
+    width: 300px;
+  }
+  h1 {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  h2 {
+    margin: 0px;
+    padding-top: 40px;
+    font-size: 20px;
+    color: #515f77;
+    font-weight: 400;
+    display: block;
+  }
+
+  .banner {
+    height: 300px;
+  }
+
+  .sky {
+    background-size: cover, 250px;
+  }
+
+  .banner-no-mailbox-selector {
+    margin-bottom: 40px;
+  }
+
+  mat-icon {
+    top: 170px;
+    left: 10px;
+  }
+}
+

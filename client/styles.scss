@@ -1,0 +1,339 @@
+/* You can add global styles to this file, and also import other style files */
+//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+
+
+// Include non-theme styles for core.
+@include mat-core();
+
+//define custom palette
+
+$ahem-primary: (
+  50: #7e8ca6,
+  100: #7e8ca6,
+  200: #7e8ca6,
+  300: #7e8ca6,
+  400: #515f77,
+  500: #515f77,
+  600: #515f77,
+  700: #515f77,
+  800: #515f77,
+  900: #515f77,
+  A100: #27354b,
+  A200: #27354b,
+  A400: #27354b,
+  A700: #27354b,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+
+
+// below creates a primary palette with three shades of blue
+//$my-primary: mat-palette($my-blue, 100, 50, 200);
+
+// Define a theme.
+$ahem-app-primary: mat-palette($ahem-primary, 600, 100, A700);
+$ahem-app-accent:  mat-palette($mat-blue, 50, 50, 700);
+$ahem-app-warn:    mat-palette($mat-red);
+
+$ahem-app-theme: mat-light-theme($ahem-app-primary, $ahem-app-accent, $ahem-app-warn);
+
+// Include all theme styles for the components.
+@include angular-material-theme($ahem-app-theme);
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body, material-app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f5f5f6;
+  //overflow: hidden;
+}
+
+h1 {
+  display: block;
+  font-size: 1.4em;
+  -webkit-margin-before: 0.83em;
+  -webkit-margin-after: 0.83em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+
+
+ahem-landing-page, ahem-email-view, ahem-privacy, ahem-api-documentation, ahem-page-not-found {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+
+.ahem-app {
+  position: absolute;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  overflow: auto;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+//@media screen and (min-width: 720px) {
+//  app-main-page {
+//    display: flex;
+//    display: -webkit-flex;
+//    flex-direction: column;
+//    -webkit-flex-direction: column;
+//    flex-grow: 1;
+//    -webkit-flex-grow: 1;
+//    overflow: auto;
+//    height: 100%;
+//  }
+//}
+
+app-main-page-large-screen {
+height: 100%;
+}
+
+app-mailbox-view-page {
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  -webkit-flex: 1;
+  overflow: auto;
+  height: 100%;
+}
+
+.ahem-sideNav-container {
+  flex-grow: 1;
+}
+
+mat-sidenav-content > div {
+  flex-grow: 1;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  height: 100%;
+}
+
+.ahem-flex-container {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.ahem-toolbar {
+  //height: auto !important;
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  :focus {
+    outline: none !important;
+  }
+}
+
+.ahem-toolbar .mat-toolbar-layout {
+  height: 100%;
+}
+
+
+.footer {
+  display: flex;
+  display: -webkit-flex;
+  /*padding: 1rem;*/
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 720px) {
+  .footer-mobile {
+    bottom: 0;
+  }
+}
+
+
+.ahem-mailbox-selector {
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+}
+
+.ahem-mailbox-selector-internal {
+  align-self: end;
+}
+
+.ahem-centered {
+  margin: auto;
+  align-self: center;
+  padding: 20px;
+}
+
+.ahem-doc-api {
+  min-width: 320px;
+  font-size: 14px;
+}
+
+
+.ahem-blog {
+  min-width: 320px;
+  font-size: 18px;
+}
+
+
+@media screen and (min-width: 720px) {
+  .ahem-doc-api {
+    min-width: 600px;
+    max-width: 1200px;
+  }
+  .ahem-blog {
+    min-width: 600px;
+    max-width: 800px;
+    font-size: 21px;
+
+  }
+}
+
+
+.ahem-definition-of {
+  display:inline !important;
+}
+
+.ahem-margin-auto {
+  margin: auto;
+}
+
+
+.ahem-hand-pointer {
+  cursor: pointer;
+}
+
+.ahem-overflow {
+  overflow: auto;
+}
+
+.ahem-sideNav {
+  box-shadow: 4px 2px 11px -5px rgba(0, 0, 0, 0.55);
+  width: 300px;
+}
+
+mat-list {
+  padding-top: 0px !important;
+}
+
+.ahem-logo-span {
+  height: 100%;
+}
+
+.ahem-spacer {
+  flex: 3;
+  -webkit-flex: 3;
+  -webkit-box-flex: 3;
+}
+
+.mat-icon.ahem-logo {
+  color: mat-color($ahem-app-accent);
+  height: 100%;
+  width: 90px;
+}
+
+.ahem-email-selected {
+  background: #fafafa;
+  font-weight: bold;
+}
+
+.ahem-email-list-item {
+  :hover {
+    background: #fafafa;
+    transition: all .3s;
+  }
+  :active {
+    background: lightblue;
+    transition: all .3s;
+  }
+}
+
+.ng-adsense-center {
+  text-align: center;
+  margin: 10px;
+}
+
+.adsense-container {
+  flex: 1;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ng-adsense-none {
+  display: none;
+}
+
+.ng-adsense-adaptive {
+  text-align: center;
+  margin: 10px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px){
+  .adsense-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .ng-adsense-adaptive {
+    width: 200px;
+  }
+  .ng-adsense-none {
+    display: block;
+  }
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+//.ahem-sidnav-content {
+//  height: 80%;
+//  overflow: auto;
+//  //width: 100%;
+//  flex: 1;
+//  flex-direction: column;
+//  padding: 20px;
+//  margin-bottom: 20px;
+//}
+
+
+
+

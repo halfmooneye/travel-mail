@@ -1,0 +1,63 @@
+<mat-toolbar *ngIf="selectedEmail" color="accent" class="ahem-internal-toolbar">
+  <button mat-button (click)="navigateToMailbox()"><mat-icon>arrow_back</mat-icon> Back</button>
+  <button mat-button (click)="deleteFile()"><fa-icon [icon]="['fas', 'trash']"></fa-icon> Delete</button>
+  <button mat-button (click)="markAsReadOrUnread()"><fa-icon [icon]="['far', selectedEmail.isRead ? 'envelope' : 'envelope-open']"></fa-icon> Mark as {{selectedEmail.isRead ? 'unread' : 'read'}}</button>
+</mat-toolbar>
+
+<div *ngIf="loading" class="center-screen">
+  <app-progress></app-progress>
+</div>
+
+<div *ngIf="!loading" class="ahem-centered ahem-overflow">
+  <mat-list *ngIf="!selectedEmail" class="ahem-email-list">
+    <div *ngIf="(emailList)?.length>0">
+      <div class="email-list-container">
+        <ng-adsense *ngIf="this.deviceService.getPlatformWidth()>1024" class="email-list-adsense" [adSlot]="5324689158"></ng-adsense>
+        <div class="emails-list">
+          <div *ngFor='let email of emailList' (click)="clickedEmail(email)" class="ahem-email-list-item" [ngClass]="{'ahem-email-selected': email.isSelected }">
+            <app-email-info [emailInfo]="email"></app-email-info>
+            <mat-divider></mat-divider>
+          </div>
+        </div>
+        <ng-adsense class="email-list-adsense" [adSlot]="5324689158"></ng-adsense>
+      </div>
+    </div>
+    <div *ngIf="(emailList)?.length==0" class="ahem-empty-list">
+      <div>
+        This mailbox is currently empty.
+        EMails sent to {{getEmptyMailboxText()}} will be listed here.
+        <br>
+      </div>
+      <img src="assets/svg/fumbled-bluish.svg" class="fumbled">
+      <div>
+        <p>
+          To continue, send an email to: {{getEmptyMailboxText()}}, or use one of the following links:
+        <ul>
+          <li>
+            <a [routerLink]="['/']">
+              AHEM Home
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/privacy']">
+              Privacy policy
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/help/api']">
+              API Documentation
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/o4oren/Ad-Hoc-Email-Server" target="_blank">
+              Our GitHub Home
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </mat-list>
+  <app-email-view *ngIf="selectedEmail" [email]="selectedEmail" [loading]="true"></app-email-view>
+  <!--<ng-adsense class="ng-adsense-center" [adSlot]="5324689158"></ng-adsense>-->
+</div>
