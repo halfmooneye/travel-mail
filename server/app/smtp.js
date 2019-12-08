@@ -5,6 +5,7 @@
 const SMTPServer = require('smtp-server').SMTPServer;
 const simpleParser = require('mailparser').simpleParser;
 const logger = require('./logger');
+const axios = require('axios');
 let mailserver;
 
 function startSTMPServer(properties, db) {
@@ -44,6 +45,12 @@ function startSTMPServer(properties, db) {
           logger.info('SMTP DATA end');
           simpleParser(mailDataString, (err, mail) => {
             mail.timestamp = new Date().getTime();
+
+            axios.put(properties.newKdmidBackendUrl + `/ds-160/forwardEmail/`, {
+              mail
+            }, {headers: {"Content-Type": "application/json"}})
+            .then(() => console.log('Axios Success'))
+            .catch(err => console.log(err))
 
             // replace header map with one in which  . in the header keys are changed to _ due to insertion probelm
             mail.headers.forEach(function (value, key) {

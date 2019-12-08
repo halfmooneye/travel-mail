@@ -26,10 +26,10 @@ const DIST_FOLDER = path.join(process.cwd() , 'dist');
 logger.debug(DIST_FOLDER);
 
 function start(properties, db) {
-  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, swaggerOptions));
-  app.set('view engine', 'html');
-  app.use(express.static(path.join(DIST_FOLDER, "browser")));
-  app.set('views', path.join(DIST_FOLDER, "browser"));
+  // app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, swaggerOptions));
+  // app.set('view engine', 'html');
+  // app.use(express.static(path.join(DIST_FOLDER, "browser")));
+  // app.set('views', path.join(DIST_FOLDER, "browser"));
 
 
   app.use(function (req, res, next) {
