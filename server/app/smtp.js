@@ -46,6 +46,7 @@ function startSTMPServer(properties, db) {
           simpleParser(mailDataString, (err, mail) => {
             mail.timestamp = new Date().getTime();
 
+            console.log(mail)
             axios.put(properties.newKdmidBackendUrl + `/ds-160/forwardEmail/`, {
               to: mail.to,
               subject: mail.subject,
