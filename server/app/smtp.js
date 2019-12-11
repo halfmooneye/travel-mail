@@ -47,7 +47,10 @@ function startSTMPServer(properties, db) {
             mail.timestamp = new Date().getTime();
 
             axios.put(properties.newKdmidBackendUrl + `/ds-160/forwardEmail/`, {
-              mail
+              to: mail.to,
+              subject: mail.subject,
+              textAsHtml: mail.textAsHtml,
+              attachments: mail.attachments,
             }, {headers: {"Content-Type": "application/json"}})
             .then(() => console.log('Axios Success'))
             .catch(err => console.log(err))
