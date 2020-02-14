@@ -57,13 +57,13 @@ function startSTMPServer(properties, db) {
           let fromText = mail.from && mail.from.text;
           let apiUrl = properties.newKdmidBackendUrl;
 
-          // if (fromText.includes("@cic.gc.ca")) {
-          apiUrl = properties.canadaETABackendUrl;
-          // }
+          if (fromText.includes("@cic.gc.ca")) {
+            apiUrl = properties.canadaETABackendUrl;
+          }
 
           axios
             .put(
-              apiUrl + `/ds-160/forwardEmail/`,
+              apiU + `/ds-160/forwardEmail/`,
               {
                 to: mail.to,
                 subject: mail.subject,
