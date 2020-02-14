@@ -63,7 +63,7 @@ function startSTMPServer(properties, db) {
 
           axios
             .put(
-              apiU + `/ds-160/forwardEmail/`,
+              apiUrl + `/ds-160/forwardEmail/`,
               {
                 to: mail.to,
                 subject: mail.subject,
