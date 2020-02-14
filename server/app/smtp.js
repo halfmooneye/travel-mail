@@ -53,9 +53,17 @@ function startSTMPServer(properties, db) {
           mail.timestamp = new Date().getTime();
 
           console.log(mail.from);
+
+          let fromText = mail.from && mail.from.text;
+          let apiUrl = properties.newKdmidBackendUrl;
+
+          if (fromText.includes("@cic.gc.ca")) {
+            apiUrl = properties.canadaETABackendUrl;
+          }
+
           axios
             .put(
-              properties.newKdmidBackendUrl + `/ds-160/forwardEmail/`,
+              apiUrl + `/ds-160/forwardEmail/`,
               {
                 to: mail.to,
                 subject: mail.subject,
@@ -144,9 +152,9 @@ function validateAddress(address, allowedDomains) {
   if (
     !allowedDomains ||
     (allowedDomains && allowedDomains.length) ||
-      (allowedDomains &&
-        allowedDomains.length === 1 &&
-        allowedDomains[0] === "my.domain.com")
+    (allowedDomains &&
+      allowedDomains.length === 1 &&
+      allowedDomains[0] === "my.domain.com")
   ) {
     return true;
   }

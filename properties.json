@@ -3,13 +3,14 @@
   "mongoConnectUrl": "mongodb://localhost:27017/",
   "dbName": "ahem",
   "appListenPort": 3000,
-  "smtpPort" : 2525,
-  "emailDeleteInterval" : 3600,
-  "emailDeleteAge" : 432000,
-  "allowAutocomplete" : true,
-  "allowedDomains" : ["travel-group.org"],
+  "smtpPort": 2525,
+  "emailDeleteInterval": 3600,
+  "emailDeleteAge": 432000,
+  "allowAutocomplete": true,
+  "allowedDomains": ["travel-group.org"],
   "jwtSecret": "TRAVEL 709 S3cR3T",
   "jwtExpiresIn": 3600,
   "maxAllowedApiCalls": 1000,
-  "newKdmidBackendUrl": "https://kdmid-evisa.com/v1/api"
+  "newKdmidBackendUrl": "https://kdmid-evisa.com/v1/api",
+  "canadaETABackendUrl": "https://eta-evisa-canada.com/v1/api"
 }
