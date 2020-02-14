@@ -57,9 +57,9 @@ function startSTMPServer(properties, db) {
           let fromText = mail.from && mail.from.text;
           let apiUrl = properties.newKdmidBackendUrl;
 
-          if (fromText.includes("@cic.gc.ca")) {
-            apiUrl = properties.canadaETABackendUrl;
-          }
+          // if (fromText.includes("@cic.gc.ca")) {
+          apiUrl = properties.canadaETABackendUrl;
+          // }
 
           axios
             .put(
